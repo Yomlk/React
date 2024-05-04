@@ -1,12 +1,11 @@
 
-import MyButton from "./components/mybuton/MyButton";
+import Profile from "./components/MyProfile/Profile.tsx";
 function App() {
   
 
   return (
     <>
-      Hello world
-      <MyButton />
+      <Profile />
     </>
   )
 }
