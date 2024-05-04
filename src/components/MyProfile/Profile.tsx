@@ -11,7 +11,7 @@ export default function Profile() {
             <p>Первая буква фамилии: {user.lastName[0]}</p>
             <img 
               className = 'leopard'
-              src = {user.imageUrl}
+              src = {user.imageUrl} 
             />
         </div>
         </>
