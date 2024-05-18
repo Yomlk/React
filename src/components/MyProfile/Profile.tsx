@@ -1,3 +1,4 @@
+import classes from './Profile.module.scss'
 export default function Profile() {
     const user = {
         firstName : 'Андрей',
@@ -6,13 +7,17 @@ export default function Profile() {
     }
     return (
         <>
-        <div>
+        <div className= {classes.profile}>
+            <div className={classes.image}>
+             <img src = {user.imageUrl} />
+            </div>
+            <div className= {classes.Username}>
             <p>Имя: {user.firstName}</p>
-            <p>Первая буква фамилии: {user.lastName[0]}</p>
-            <img 
-              className = 'leopard'
-              src = {user.imageUrl} 
-            />
+             <p>Первая буква фамилии: {user.lastName[0]}</p>
+            </div>
+            
+             
+            
         </div>
         </>
     )

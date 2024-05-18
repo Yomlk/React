@@ -2,10 +2,13 @@
 import Profile from "./components/MyProfile/Profile.tsx";
 function App() {
   
+const isLoggedIn = true;
+
+
 
   return (
     <>
-      <Profile />
+      {isLoggedIn ? <Profile /> :  <div>Авторизуйтесь</div>}
     </>
   )
 }
