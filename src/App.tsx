@@ -1,9 +1,9 @@
 import Profile from "./components/MyProfile/Profile.tsx";
-import ProductList from "./components/ProductList/ProductList.tsx"
+import ProductList from "./components/ProductList/ProductList.tsx";
 function App() {
   const isLoggedIn = true;
 
-  const message = "gf";
+  const message = "Hi!";
 
   return (
     <>
