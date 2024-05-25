@@ -1,6 +1,5 @@
-import * as classes from "./Product.modules.scss";
-import { ProductItem } from "../../types/product";
-import "./Product.modules.scss"
+import classes from './Product.module.scss'
+import { ProductItem } from "../../types/product.ts";
 
 interface ProductProps {
   product: ProductItem;
@@ -8,15 +7,16 @@ interface ProductProps {
 
 const Product = (props: ProductProps) => {
   const { product } = props;
-  
+
   return (
-    <div className="cards">
-      <img className="img" src={product.imageUrl} />
-      <p className="card">{product.name}</p>
+    <div className={classes.cards}>
       
-      <p className="card">{product.price} руб.</p>
-      <p className="card">Скидка:{product.discount} %</p>
+      <p className={classes.name}>{product.name}</p>
+      <p><img src={product.imageUrl} className={classes.img}/></p>
+      <p className={classes.price}>{product.price} руб.</p>
+      <p className={classes.discount}>{product.discount?.type}</p>
     </div>
   );
 };
+
 export default Product;

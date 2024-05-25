@@ -1,10 +1,14 @@
 import { FC } from "react";
 
-interface RowProps {
+interface RowPros {
   children?: React.ReactNode;
   direction?: "row" | "column";
 }
-const Row: FC<RowProps> = ({ children, direction = "row" }) => {
-  return <div style={{ display: "flex", flexDirection: direction, justifyContent:"center"}}>{children}</div>;
+const Row: FC<RowPros> = (props) => {
+  const { children, direction = "row" } = props;
+  return (
+    <div style={{ display: "flex", flexDirection: direction }}>{children}</div>
+  );
 };
+
 export default Row;
