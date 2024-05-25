@@ -1,21 +1,26 @@
 import classes from "./Profile.module.scss";
-export default function Profile() {
+
+const Profile = () => {
   const user = {
-    firstName: "Андрей",
-    lastName: "Копейкин",
-    imageUrl: "./src/components/MyProfile/img/sinie-glaza-leoparda.jpg",
+    firstName: "John",
+    lastName: "Doe",
+    imageUrl: "/vite.svg",
+    active: false,
   };
+  if (!user.active) {
+    return null;
+  }
+
   return (
-    <>
-      <div className={classes.profile}>
-        <div className={classes.image}>
-          <img src={user.imageUrl} />
-        </div>
-        <div className={classes.Username}>
-          <p>Имя: {user.firstName}</p>
-          <p>Первая буква фамилии: {user.lastName[0]}</p>
-        </div>
+    <div className={classes.profile}>
+      <div className={classes.image}>
+        <img src={user.imageUrl} alt="Аватар пользователя" />
       </div>
-    </>
+      <p
+        className={classes.userName}
+      >{`${user.firstName} ${user.lastName[0]}.`}</p>
+    </div>
   );
-}
+};
+
+export default Profile;

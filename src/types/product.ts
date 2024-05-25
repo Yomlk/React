@@ -1,7 +1,12 @@
 export interface ProductItem {
   id: number;
   name: string;
+  imageUrl:string,
   price: number;
-  discount?:number;
-  imageUrl:string;
+  discount?: {
+    type: string;
+    value: number;
+  };
+  rating:number;
+  isFavorite:boolean;
 }
